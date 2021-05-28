@@ -1,7 +1,7 @@
 var random1 = Math.floor(Math.random()*6)+1;
 var random2 = Math.floor(Math.random()*6)+1;
 
-function getOrder(srcs, idx){
+function getOrder(idx){
     src = "dice" + idx +".png";
     return src;
 }
@@ -12,9 +12,9 @@ for(var i = 0; i < 2; i++){
     document.querySelectorAll('img')[i].addEventListener('mouseover', function (){
         for(var j = 0; j < 2; j++){
             if(j == 0){
-                srcs = getOrder("src", random1);
+                srcs = getOrder(random1);
             } else {
-                srcs = getOrder("src2", random2);
+                srcs = getOrder(random2);
             }
             document.querySelectorAll('img')[j].setAttribute('src','./images/'+srcs);
 
